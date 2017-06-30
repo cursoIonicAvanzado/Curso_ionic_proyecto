@@ -1,0 +1,67 @@
+<ion-nav-view>
+  <ion-nav-bar class="bar-assertive" align-title="center">
+    <ion-nav-title>Registro</ion-nav-title>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="contenedor pad-top">
+      <div>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Nombre Completo:</span>
+          <input type="email" ng-model="usuario.nombre" placeholder="Luis Daniel">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Ap. Paterno</span>
+          <input type="email" ng-model="usuario.apPaterno" placeholder="Perez">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Ap. Materno</span>
+          <input type="email" ng-model="usuario.apMaterno" placeholder="Reveles">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Correo Electronico</span>
+          <input type="email" ng-model="usuario.correo" placeholder="victor@hotmail.com">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Contraseña</span>
+          <input type="password" ng-model="usuario.password" placeholder="Suhr">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Numero Telefonico</span>
+          <input type="number" ng-model="usuario.Numero" placeholder="493123456">
+        </label>
+        <div class="item range range-positive">.
+          <p style="margin-right: 15px; font-size: 20px;">Edad: {{usuario.edad}}</p>
+          <i class="icon ion-person"></i>
+          <input type="range" name="volume" min="0" max="100" ng-model="usuario.edad">
+          <i class="icon ion-person-add"></i>
+        </div>
+        <div>
+          <label class="item item-input item-select">
+            Estado:
+            <select  ng-model="listaUno.opcion" ng-options="opt as opt.nombre for opt in estados" ng-change="selectEstado()">
+            </select>
+          </label>
+        </div>
+        <div>
+          <label class="item item-input item-select">
+            Municipio:
+            <select  ng-model="listaDos.opcion" ng-options="opt as opt.nombre  for opt in municipiosEstados" ng-change="selectMunicipio()">
+            </select>
+          </label>
+        </div>
+        <li class="item item-toggle">
+          <p style="font-size: 15px;">He leido todos los terminos y condiciones</p>
+          <label class="toggle toggle-assertive">
+            <input type="checkbox">
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </li>
+        <label class="item" style="text-align: center">
+          <input type="button" class="button button-block button-assertive" value="Registrarse">
+        </label>
+      </div>
+    </div>
+  </ion-content>
+</ion-nav-view>

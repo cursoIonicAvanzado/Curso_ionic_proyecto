@@ -1,0 +1,25 @@
+<ion-nav-view>
+  <ion-nav-bar class="bar-assertive" align-title="center">
+    <ion-nav-title>Iniciar Sesion</ion-nav-title>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="contenedor pad-top">
+      <div>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Correo Electronico</span>
+          <input type="text" ng-model="loginData.correo" placeholder="victor@hotmail.com">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Contraseña</span>
+          <input type="password" ng-model="loginData.password" placeholder="Suhr">
+        </label>
+        <label class="item" style="text-align: center">
+          <input type="button" class="button button-block button-assertive" value="Iniciar Sesion" ng-click="goMaps()">
+        </label>
+        <label class="item" style="text-align: center">
+          <input type="button" class="button button-clear button-positive" value="O Crea Tu Cuenta Aqui" ng-click="goRegistro()">
+        </label>
+      </div>
+    </div>
+  </ion-content>
+</ion-nav-view>
