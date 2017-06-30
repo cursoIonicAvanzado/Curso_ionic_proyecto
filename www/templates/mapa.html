@@ -1,7 +1,7 @@
 <ion-nav-view>
   <div>
     <ion-side-menus enable-menu-with-back-views="false">
-      <ion-side-menu-content>
+      <ion-side-menu-content drag-content="false">
         <ion-nav-bar class="bar-assertive" align-title="center">
           <ion-nav-back-button>
           </ion-nav-back-button>
@@ -12,7 +12,8 @@
         </ion-nav-bar>
         <ion-nav-view>
           <ion-content>
-
+            <div id="map">
+            </div>
           </ion-content>
         </ion-nav-view>
       </ion-side-menu-content>
@@ -24,6 +25,15 @@
             <b>Victor Hugo Reveles Espitia</b>
             <p>Jerez, Zacatecas</p>
           </div>
+          <button class="button button-block btn-color" ng-click="goPerfil()">
+            Perfil
+          </button>
+          <button class="button button-block  btn-color" ng-click="goLogin()">
+            Cerrar Sesion
+          </button>
+          <button class="button button-block  btn-color" ng-click="goLogin()">
+            {{latitud}}  {{longitud}}
+          </button>
           <ion-list>
           </ion-list>
         </ion-content>
